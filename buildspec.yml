@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying to S3 with no-cache headers..."
+      - aws s3 cp . s3://www.csce412egadi.xyz/ --recursive --cache-control no-cache
